@@ -22,7 +22,7 @@ export const handler = async (event) => {
         Payload: JSON.stringify(event),
     };
 
-    console.log("Calling command handlers");
+    console.log("Invoking lambda: ", childFunctionName);
     await lambda.invoke(params).promise();
   
     const response = {
